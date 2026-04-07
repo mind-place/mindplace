@@ -877,24 +877,33 @@ footer{
   <p class="ey rv">Notice</p>
   <h2 class="st rv d1">공지사항</h2>
   <div class="notices-wrap rv d2">
-    <!-- 공지 작성 폼 -->
-    <div class="notice-form">
-      <h4>공지사항 작성</h4>
-      <div class="nf-row">
-        <select id="nf-type">
-          <option value="공지">공지</option>
-          <option value="안내">안내</option>
-          <option value="이벤트">이벤트</option>
-        </select>
-        <input type="text" id="nf-title" placeholder="제목을 입력하세요" maxlength="80">
+    <div class="notice-list" id="notice-list">
+
+      <!-- ★★★ 새 공지는 여기 아래에 추가하세요 ★★★ -->
+      <div class="nr">
+        <span class="ntg tn">공지</span>
+        <span class="ntl">4월 18일 공개사례발표 참관자 모집</span>
+        <span class="ndt">2026.04.07</span>
       </div>
-      <div class="nf-row">
-        <textarea id="nf-body" placeholder="내용을 입력하세요 (선택사항)"></textarea>
+
+      
+      <!-- 복사해서 붙여넣고 내용만 바꾸시면 됩니다 -->
+
+      <div class="nr">
+        <span class="ntg tn">공지</span>
+        <span class="ntl">마음터 공식 홈페이지가 새롭게 오픈하였습니다. 많은 방문 부탁드립니다.</span>
+        <span class="ndt">2026.03.10</span>
       </div>
-      <button class="nf-btn" onclick="addNotice()">등록하기</button>
+
+      <div class="nr">
+        <span class="ntg ti">안내</span>
+        <span class="ntl">2026년 봄 집단 프로그램 참여자를 모집합니다. 자세한 내용은 네이버 블로그를 확인해 주세요.</span>
+        <span class="ndt">2026.03.01</span>
+      </div>
+
+      <!-- ★★★ 여기까지 ★★★ -->
+
     </div>
-    <!-- 공지 목록 -->
-    <div class="notice-list" id="notice-list"></div>
   </div>
 </section>
 
@@ -959,37 +968,7 @@ function toggleFaq(el){
   if(!o)el.classList.add('open');
 }
 
-/* ── notices (localStorage) ── */
-var NKEY='mindplace_notices';
-function getNotices(){try{return JSON.parse(localStorage.getItem(NKEY)||'[]');}catch(e){return[];}}
-function saveNotices(arr){localStorage.setItem(NKEY,JSON.stringify(arr));}
-
-function renderNotices(){
-  var list=document.getElementById('notice-list');
-  var notices=getNotices();
-  /* seed defaults if empty */
-  if(notices.length===0){
-    notices=[
-      {id:Date.now()-2,type:'공지',title:'마음터 공식 홈페이지가 새롭게 오픈하였습니다. 많은 방문 부탁드립니다.',date:'2026.03.10'},
-      {id:Date.now()-1,type:'안내',title:'2026년 봄 집단 프로그램 참여자를 모집합니다. 자세한 내용은 네이버 블로그를 확인해 주세요.',date:'2026.03.01'}
-    ];
-    saveNotices(notices);
-  }
-  if(notices.length===0){
-    list.innerHTML='<p class="empty-notice">등록된 공지사항이 없습니다.</p>';
-    return;
-  }
-  var typeClass={공지:'tn',안내:'ti',이벤트:'te'};
-  list.innerHTML=notices.slice().reverse().map(function(n){
-    return '<div class="nr">'+
-      '<span class="ntg '+(typeClass[n.type]||'tn')+'">'+n.type+'</span>'+
-      '<span class="ntl">'+n.title+'</span>'+
-      '<span class="ndt">'+n.date+'</span>'+
-      '<button class="del-btn" onclick="deleteNotice('+n.id+');event.stopPropagation()">✕</button>'+
-    '</div>';
-  }).join('');
-}
-
-function addNotice(){
-  var type=document.getElementById('nf-type').value;
-  var title=document.getElementById('nf-title').va
+/* ── notices: 공지사항은 HTML에 직접 작성됩니다 ── */
+</script>
+</body>
+</html>
