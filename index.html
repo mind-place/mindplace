@@ -11,7 +11,7 @@
 <meta property="og:title" content="마음터심리상담센터 | 이수역 도보 3분 심리상담">
 <meta property="og:description" content="상담심리사 1급 정형수 원장이 직접 진행하는 개인·커플·가족 심리상담. 네이버 예약 또는 전화 02-3486-5007, 네이버 톡톡으로 문의하세요.">
 <meta property="og:url" content="https://mind-place.co.kr/">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "마음터심리상담센터", "alternateName": "Mindplace", "url": "https://mind-place.co.kr/", "telephone": "+82-2-3486-5007", "email": "tristan93@naver.com", "description": "서울 서초구 이수역 도보 3분. 상담심리사 1급 정형수 원장이 직접 진행하는 개인·커플·가족 심리상담센터.", "address": {"@type": "PostalAddress", "streetAddress": "동작대로 58", "addressLocality": "서초구", "addressRegion": "서울특별시", "addressCountry": "KR"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "22:00"}], "founder": {"@type": "Person", "name": "정형수", "jobTitle": "원장, 상담심리사 1급"}, "sameAs": ["https://blog.naver.com/tristan93", "https://www.instagram.com/mindplace.center/", "https://www.youtube.com/@정형수tv마음터"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "마음터심리상담센터", "alternateName": "Mindplace", "url": "https://mind-place.co.kr/", "telephone": "+82-2-3486-5007", "email": "tristan93@naver.com", "description": "서울 서초구 이수역 도보 3분. 상담심리사 1급 정형수 원장이 직접 진행하는 개인·커플·가족 심리상담센터.", "address": {"@type": "PostalAddress", "streetAddress": "동작대로 58", "addressLocality": "서초구", "addressRegion": "서울특별시", "addressCountry": "KR"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "22:00"}], "founder": {"@type": "Person", "name": "정형수", "jobTitle": "원장, 상담심리사 1급"}, "sameAs": ["https://blog.naver.com/mindplace-center", "https://www.instagram.com/mindplace.center/", "https://www.youtube.com/@TV-gt8li"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+KR:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -523,6 +523,17 @@ section{padding:90px 8%;}
 .te{border:1px solid #9B7CB8;color:#9B7CB8;}
 .ntl{font-size:.9rem;flex:1;word-break:keep-all;line-height:1.6;color:var(--tx);}
 .ndt{font-size:.75rem;color:#bbb;flex-shrink:0;}
+.nr.has-body{display:block;}
+.nr.has-body .nmain{display:flex;align-items:baseline;gap:16px;}
+.nr:not(.has-body){cursor:default;}
+.nr:not(.has-body):hover{padding-left:0;}
+.nmore{color:var(--ac,#b46a48);font-size:.78rem;margin-left:8px;white-space:nowrap;}
+.nbody{display:none;margin:14px 0 4px;padding:16px 18px;background:rgba(0,0,0,.035);border-radius:8px;font-size:.88rem;line-height:1.8;}
+.nbody p{margin:2px 0;word-break:keep-all;}
+.nbody b{display:inline-block;min-width:84px;color:var(--tx);}
+.nr.open .nbody{display:block;}
+.nr.open .nmore{display:none;}
+
 .del-btn{
   background:none;border:none;cursor:pointer;
   font-size:.75rem;color:#ccc;padding:2px 6px;
@@ -910,10 +921,21 @@ footer{
     <div class="notice-list" id="notice-list">
 
       <!-- ★★★ 새 공지는 여기 아래에 추가하세요 ★★★ -->
-      <div class="nr">
-        <span class="ntg tn">공지</span>
-        <span class="ntl">[예비부부 일일 클래스] 결전사 · 11월 7일(토) 오후 4시~8시 · 참가비 1인 12만원(커플 24만원) 사전 입금 · 신청 마감 11월 2일(월) · 선착순 3쌍 · 문의 02-3486-5007 또는 네이버 톡톡</span>
-        <span class="ndt">2026.10.27</span>
+      <div class="nr has-body" onclick="toggleNotice(this)" tabindex="0" role="button" aria-expanded="false">
+        <div class="nmain">
+          <span class="ntg tn">공지</span>
+          <span class="ntl">[예비부부 일일 클래스] 결전사 안내 · 11월 7일(토) <span class="nmore">자세히 보기 ▾</span></span>
+          <span class="ndt">2026.10.27</span>
+        </div>
+        <div class="nbody">
+          <p><b>일시</b> 2026년 11월 7일(토) 오후 4시 ~ 8시</p>
+          <p><b>장소</b> 마음터심리상담센터 (이수역 인근)</p>
+          <p><b>참가비</b> 1인 12만원 (커플 24만원) · 사전 입금</p>
+          <p><b>정원</b> 선착순 3쌍</p>
+          <p><b>신청 마감</b> 11월 2일(월)</p>
+          <p><b>신청</b> <a href="https://docs.google.com/forms/d/1W8GqIMT_c3I4J809_YhkPS4NnY1nltQu8bnx9b4Qc-Y/edit" target="_blank" onclick="event.stopPropagation()">신청서 작성하기 →</a></p>
+          <p><b>문의</b> 02-3486-5007 또는 네이버 톡톡</p>
+        </div>
       </div>
       <div class="nr">
         <span class="ntg ti">안내</span>
@@ -955,7 +977,7 @@ footer{
   <h2 class="st rv d1">콘텐츠로 먼저 만나보세요</h2>
   <p class="sl rv d2">원장 정형수의 심리 이야기를<br>다양한 채널에서 먼저 만나보실 수 있습니다.</p>
   <div class="sng">
-    <a href="https://blog.naver.com/tristan93" target="_blank" class="snc rv d1">
+    <a href="https://blog.naver.com/mindplace-center" target="_blank" class="snc rv d1">
       <span class="ic2">✏️</span><h3>네이버 블로그</h3><p>상담실에서 온 편지</p>
     </a>
     <a href="https://www.threads.net/@mindplace.center" target="_blank" class="snc rv d2">
@@ -964,7 +986,7 @@ footer{
     <a href="https://www.instagram.com/mindplace.center/" target="_blank" class="snc rv d3">
       <span class="ic2">📷</span><h3>Instagram</h3><p>@mindplace.center</p>
     </a>
-    <a href="https://www.youtube.com/@정형수tv마음터" target="_blank" class="snc rv d4">
+    <a href="https://www.youtube.com/@TV-gt8li" target="_blank" class="snc rv d4">
       <span class="ic2">▶</span><h3>유튜브</h3><p>정형수tv마음터</p>
     </a>
     <a href="https://booking.naver.com/booking/13/bizes/824492" target="_blank" class="snc rv d4">
@@ -1010,6 +1032,15 @@ function toggleFaq(el){
   if(!o)el.classList.add('open');
 }
 
+
+/* ── notices: 눌러서 펼치기 ── */
+function toggleNotice(el){
+  var o=el.classList.toggle('open');
+  el.setAttribute('aria-expanded',o?'true':'false');
+}
+document.addEventListener('keydown',function(e){
+  if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('has-body')){e.preventDefault();toggleNotice(e.target);}
+});
 /* ── notices: 공지사항은 HTML에 직접 작성됩니다 ── */
 </script>
 </body>
